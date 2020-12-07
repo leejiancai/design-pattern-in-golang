@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestByteSaveInput(t *testing.T)  {
+func TestByteSaveInput(t *testing.T) {
 	want := []byte("Golang")
 	bs := &ByteSaveInput{}
 	bs.write(want, 0, 0)
@@ -16,7 +16,7 @@ func TestByteSaveInput(t *testing.T)  {
 
 }
 
-func TestBase64(t *testing.T)  {
+func TestBase64(t *testing.T) {
 	// 这里演示的就是两个装饰器类，对原来的ByteSaveInput的功能进行了增强，并且装饰器之前还可以嵌套使用
 	want := []byte("Golang")
 	bs := &ByteSaveInput{}

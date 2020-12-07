@@ -31,7 +31,6 @@ func TestNormalNotification_notify(t *testing.T) {
 	}
 }
 
-
 func TestUrgencyNotification_notify(t *testing.T) {
 	type fields struct {
 		sender MsgSender
@@ -60,4 +59,3 @@ func TestUrgencyNotification_notify(t *testing.T) {
 		})
 	}
 }
-

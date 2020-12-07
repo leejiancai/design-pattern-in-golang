@@ -11,12 +11,14 @@ type Notification interface {
 	notify(msg string) string
 }
 
-type TeleMsgSender struct {}
-func(t *TeleMsgSender) send(msg string) string {
+type TeleMsgSender struct{}
+
+func (t *TeleMsgSender) send(msg string) string {
 	return fmt.Sprintf("TeleMsgSender:%s", msg)
 }
 
-type WechatSender struct {}
+type WechatSender struct{}
+
 func (w *WechatSender) send(msg string) string {
 	return fmt.Sprintf("WechatSender:%s", msg)
 }
@@ -33,7 +35,7 @@ func (n *NormalNotification) notify(msg string) string {
 type UrgencyNotification struct {
 	sender MsgSender
 }
+
 func (n *UrgencyNotification) notify(msg string) string {
 	return n.sender.send(msg)
 }
-
